@@ -14,6 +14,7 @@ class BuildBattleMCPE extends PluginBase(){
   }
   
   public function transferPlayer($player, $destination)
+     $player->sendMessage("You are being transferred to a BuildIt game!")
      $player->transferPlayer("BuildBattleLobby")
   }
   
@@ -21,5 +22,6 @@ class BuildBattleMCPE extends PluginBase(){
      $player->sendMessage("[BuildBattles]There is (%?)players in this match. Match is starting in 30 seconds"
      
  }
+ //dammit
  
- ?>
+  ?>
