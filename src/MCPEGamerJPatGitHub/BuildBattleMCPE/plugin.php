@@ -8,7 +8,7 @@ use pocketmine\plugin\pluginbase;
 use pocketmine\player\playerjoinevent;
 use fastransfer\playertransferevent;
 
-class BuildBattleMCPE extends PluginBase(){
+class Main extends PluginBase(){
   public function sendMessage($player,$message){
      $player->sendMessage("§3Welcome§4to§5a§6Build§1Battle §8Server!")
   }
@@ -16,12 +16,11 @@ class BuildBattleMCPE extends PluginBase(){
   public function transferPlayer($player, $destination)
      $player->sendMessage("You are being transferred to a BuildIt game!")
      $player->transferPlayer("BuildBattleLobby")
+     $sender->getLogger(".$player. joined a BuildBattles game!")
   }
   
-  public function sendMessage($player, $message)
-     $player->sendMessage("[BuildBattles]There is (%?)players in this match. Match is starting in 30 seconds"
-     
+  public function priorGame($player, $message)
+     $player->sendPopup("Waiting for game start...")
  }
- //dammit
  
-  ?>
+  public function lobbyWait(
